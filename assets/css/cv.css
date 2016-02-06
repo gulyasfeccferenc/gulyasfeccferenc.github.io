@@ -17,10 +17,10 @@ body{
     width: calc(100% - 60px);
     max-width: 760px;
 	border: 16px solid whitesmoke;	
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, calc(50% - 90px));
+    -moz-transform: translate(-50%, calc(50% - 90px));
+    -ms-transform: translate(-50%, calc(50% - 90px));
+    -o-transform: translate(-50%, calc(50% - 90px));
+    transform: translate(-50%, calc(50% - 90px));
 
 }
