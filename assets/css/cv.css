@@ -10,7 +10,7 @@ body{
 	height: 100%;
 }
 
-.main > div {
+.main div {
     height: 400px;
     width: 300px;
     display: block;
