@@ -10,17 +10,10 @@ body{
 	height: 100%;
 }
 
-.main > img {
-    position: absolute;
-    top: 50%;
-    left: 50%;	
-    width: calc(100% - 60px);
-    max-width: 760px;
-	border: 16px solid whitesmoke;	
-    -webkit-transform: translate(-50%, calc(50% - 90px));
-    -moz-transform: translate(-50%, calc(50% - 90px));
-    -ms-transform: translate(-50%, calc(50% - 90px));
-    -o-transform: translate(-50%, calc(50% - 90px));
-    transform: translate(-50%, calc(50% - 90px));
-
+.main > div {
+    height: 400px;
+    width: 300px;
+    display: block;
+    position: relative;
+    background-image: url('../img/ooo.gif'), url('../img/static.gif');
 }
