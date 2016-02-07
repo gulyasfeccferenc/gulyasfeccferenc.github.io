@@ -1,19 +1,232 @@
-/* Global Defaults */ html, body { margin: 0px; padding: 0px; border: 0px; } body { font: 1em/1.25 Arial, Helvetica, sans-serif; }  /* Headlines */ h1, h2, h3, h4, h5, h6 { margin: 0; padding: 0; font-weight: normal; font-family: Arial, Helvetica, sans-serif; }  /* Text Styles */ p, th, td, li, dd, dt, ul, ol, blockquote, q, acronym, abbr, a, input, select, textarea { margin: 0; padding: 0; font: normal normal normal 1em/1.25 Arial, Helvetica, sans-serif; } blockquote { margin: 1.25em; padding: 1.25em } q { font-style: italic; } acronym, abbr { cursor: help; border-bottom: 1px dashed; } small { font-size:.85em; } big { font-size:1.2em; }  /* Links and Images */ a, a:link, a:visited, a:active, a:hover { text-decoration: underline; } img { border: none; }  /* Tables */ table { margin: 0; padding: 0; border: none; }  /* Forms */ form { margin: 0; padding: 0; display: inline; } label { cursor: pointer; }  /* Common Classes */ .clear { clear: both; } .floatLeft { float: left; } .floatRight { float: right; } .textLeft { text-align: left; } .textRight { text-align: right; } .textCenter { text-align: center; } .textJustify { text-align: justify; } .blockCenter { display: block; margin-left: auto; margin-right: auto; } /* remember to set width */ .bold { font-weight: bold; } .italic { font-style: italic; } .underline { text-decoration: underline; } .noindent { margin-left: 0; padding-left: 0; } .nomargin { margin: 0; } .nopadding { padding: 0; } .nobullet { list-style: none; list-style-image: none; }
+/* Global Defaults */
+html, body {
+  margin: 0px;
+  padding: 0px;
+  border: 0px; }
 
-body{
-	background-color: #000; /* #FFF8DC;*/
-}
+body {
+  font: 1em/1.25 Arial, Helvetica, sans-serif; }
 
-.main{
-	margin: 30px;
-	position: relative;
-	height: 100%;
-}
+/* Headlines */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-family: Arial, Helvetica, sans-serif; }
 
-.main div {
+/* Text Styles */
+p, th, td, li, dd, dt, ul, ol, blockquote, q, acronym, abbr, a, input, select, textarea {
+  margin: 0;
+  padding: 0;
+  font: normal normal normal 1em/1.25 Arial, Helvetica, sans-serif; }
+
+blockquote {
+  margin: 1.25em;
+  padding: 1.25em; }
+
+q {
+  font-style: italic; }
+
+acronym, abbr {
+  cursor: help;
+  border-bottom: 1px dashed; }
+
+small {
+  font-size: .85em; }
+
+big {
+  font-size: 1.2em; }
+
+/* Links and Images */
+a, a:link, a:visited, a:active, a:hover {
+  text-decoration: underline; }
+
+img {
+  border: none; }
+
+/* Tables */
+table {
+  margin: 0;
+  padding: 0;
+  border: none; }
+
+/* Forms */
+form {
+  margin: 0;
+  padding: 0;
+  display: inline; }
+
+label {
+  cursor: pointer; }
+
+/* Common Classes */
+.clear {
+  clear: both; }
+
+.floatLeft {
+  float: left; }
+
+.floatRight {
+  float: right; }
+
+.textLeft {
+  text-align: left; }
+
+.textRight {
+  text-align: right; }
+
+.textCenter {
+  text-align: center; }
+
+.textJustify {
+  text-align: justify; }
+
+.blockCenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+/* remember to set width */
+.bold {
+  font-weight: bold; }
+
+.italic {
+  font-style: italic; }
+
+.underline {
+  text-decoration: underline; }
+
+.noindent {
+  margin-left: 0;
+  padding-left: 0; }
+
+.nomargin {
+  margin: 0; }
+
+.nopadding {
+  padding: 0; }
+
+.nobullet {
+  list-style: none;
+  list-style-image: none; }
+
+/*
+  (TEXT) PARAMS
+  =================
+  1. Namespace
+  2. Intensity
+  3. Text color
+  4. Background color (flat)
+  5. Highlight #1 color
+  6. Highlight #2 color
+  7. Width (px)
+  8. Height (px)
+*/
+body {
+  background-color: #000;
+  /* #FFF8DC;*/ }
+
+.main {
+  margin: 30px;
+  position: relative;
+  height: 100%; }
+  .main div {
     height: 400px;
     width: 300px;
     display: block;
     position: relative;
-    background-image: url('../img/ooo.gif'), url('../img/static.gif');
-}
+    background-image: url("../img/ooo.gif"), url("../img/static.gif");
+    color: white;
+    position: relative; }
+@keyframes example-one-anim-1 {
+  0% {
+    clip: rect(66px, 450px, 64px, 0); }
+  5.88235% {
+    clip: rect(14px, 450px, 115px, 0); }
+  11.76471% {
+    clip: rect(26px, 450px, 33px, 0); }
+  17.64706% {
+    clip: rect(114px, 450px, 33px, 0); }
+  23.52941% {
+    clip: rect(114px, 450px, 6px, 0); }
+  29.41176% {
+    clip: rect(67px, 450px, 48px, 0); }
+  35.29412% {
+    clip: rect(2px, 450px, 99px, 0); }
+  41.17647% {
+    clip: rect(59px, 450px, 78px, 0); }
+  47.05882% {
+    clip: rect(102px, 450px, 70px, 0); }
+  52.94118% {
+    clip: rect(53px, 450px, 34px, 0); }
+  58.82353% {
+    clip: rect(9px, 450px, 38px, 0); }
+  64.70588% {
+    clip: rect(41px, 450px, 95px, 0); }
+  70.58824% {
+    clip: rect(100px, 450px, 34px, 0); }
+  76.47059% {
+    clip: rect(16px, 450px, 22px, 0); }
+  82.35294% {
+    clip: rect(24px, 450px, 62px, 0); }
+  88.23529% {
+    clip: rect(7px, 450px, 50px, 0); }
+  94.11765% {
+    clip: rect(53px, 450px, 67px, 0); }
+  100% {
+    clip: rect(82px, 450px, 104px, 0); } }
+@keyframes example-one-anim-2 {
+  0% {
+    clip: rect(13px, 450px, 51px, 0); }
+  5.88235% {
+    clip: rect(54px, 450px, 52px, 0); }
+  11.76471% {
+    clip: rect(6px, 450px, 4px, 0); }
+  17.64706% {
+    clip: rect(58px, 450px, 86px, 0); }
+  23.52941% {
+    clip: rect(72px, 450px, 25px, 0); }
+  29.41176% {
+    clip: rect(14px, 450px, 93px, 0); }
+  35.29412% {
+    clip: rect(40px, 450px, 3px, 0); }
+  41.17647% {
+    clip: rect(94px, 450px, 31px, 0); }
+  47.05882% {
+    clip: rect(28px, 450px, 52px, 0); }
+  52.94118% {
+    clip: rect(81px, 450px, 106px, 0); }
+  58.82353% {
+    clip: rect(75px, 450px, 43px, 0); }
+  64.70588% {
+    clip: rect(115px, 450px, 50px, 0); }
+  70.58824% {
+    clip: rect(27px, 450px, 113px, 0); }
+  76.47059% {
+    clip: rect(41px, 450px, 78px, 0); }
+  82.35294% {
+    clip: rect(2px, 450px, 62px, 0); }
+  88.23529% {
+    clip: rect(98px, 450px, 72px, 0); }
+  94.11765% {
+    clip: rect(72px, 450px, 102px, 0); }
+  100% {
+    clip: rect(71px, 450px, 114px, 0); } }
+    .main div:before, .main div:after {
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: black;
+      clip: rect(0, 0, 0, 0); }
+    .main div:after {
+      left: 2px;
+      text-shadow: -1px 0 red;
+      animation: example-one-anim-1 2s infinite linear alternate-reverse; }
+    .main div:before {
+      left: -2px;
+      text-shadow: 2px 0 blue;
+      animation: example-one-anim-2 3s infinite linear alternate-reverse; }
+
+/*# sourceMappingURL=cv.css.map */
