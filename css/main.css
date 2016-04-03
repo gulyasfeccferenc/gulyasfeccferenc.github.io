@@ -85,11 +85,12 @@ body {
   background: #0C0C25;
   color: #cccccc;
   font-family: 'Exo', serif;
-  background-position: 0 0;
+  background-position: 50%;
   background-repeat: repeat;
-  background-size: 100%;
-  background-image: url("https://cdn2.artstation.com/p/assets/images/images/000/389/738/large/wadim-kashin-illustrafuturs1.jpg?1420549453");
-  background-blend-mode: luminosity; }
+  background-size: 1080px;
+  background-image: url("../img/hexa.png");
+  background-blend-mode: soft-light;
+  background-attachment: fixed; }
   body > header {
     position: fixed;
     height: 60px;
