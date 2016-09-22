@@ -1,3 +1,3 @@
 # gulyasfeccferenc.github.io
 
-It's a simple page about me. Nothing impressive.
+My new generation, awesome personal page is coming soon!
