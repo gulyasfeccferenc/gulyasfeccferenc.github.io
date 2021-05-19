@@ -1,3 +1,3 @@
 # gulyasfeccferenc.github.io
 
-My new generation, awesome personal page is coming soon!
+Just an easy, colorful, business card-like personal site
