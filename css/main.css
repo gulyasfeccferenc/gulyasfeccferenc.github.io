@@ -83,82 +83,108 @@ textarea {
   padding: 0.2em 0;
 }
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
 body {
-  background: -webkit-gradient(linear, left bottom, left top, from(#2196f3), to(#9c27b0));
   background: linear-gradient(0deg, #2196f3, #9c27b0);
   color: #f0f0f0;
   font-family: "Exo", serif;
   position: relative;
+  min-height: 100vh;
   height: 100%;
-  height: 100vh;
 }
-
 body header {
   text-align: center;
   padding-top: 3em;
 }
-
 body header > img {
   max-width: 200px;
   height: auto;
   border: 4px solid rgba(0, 0, 0, 0.3);
   border-radius: 50%;
   margin: 0 auto;
-  -webkit-transition: all 0.4s cubic-bezier(1, 0, 0, 1);
   transition: all 0.4s cubic-bezier(1, 0, 0, 1);
 }
-
 body header > img:hover {
   border-radius: 0;
 }
-
 body header h1 {
   font-size: 2.5em;
   text-shadow: 0px 0px 4px black;
 }
-
 body header ul {
   list-style: none;
   padding: 0;
   margin: 0;
   cursor: default;
 }
-
 body header ul li {
   display: inline-block;
 }
-
 body header ul li img {
   height: auto;
 }
-
 body header ul.hobbies {
   font-size: 1.5em;
 }
-
 body section {
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   text-align: center;
-  margin-top: 2em;
+  margin-top: 1rem;
+  padding-top: 1rem;
   background: rgba(0, 0, 0, 0.15);
-  -webkit-box-shadow: 0px 9px 12px #55b4d2;
-          box-shadow: 0px 9px 12px #55b4d2;
+  box-shadow: 0 9px 12px #55b4d2;
 }
-
 body section a {
   color: #f0f0f0;
   text-decoration: none;
   border-bottom: 1px dashed #f0f0f0;
-  -webkit-transition: border 0.4s ease-in;
   transition: border 0.4s ease-in;
 }
-
 body section a:hover {
   border-bottom: 1px solid #f0f0f0;
+}
+body section article {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  margin: 1rem;
+}
+body section article .left-block,
+body section article .right-block {
+  display: inline-block;
+  max-width: 50%;
+  vertical-align: middle;
+}
+body section article .left-block img,
+body section article .right-block img {
+  pointer-events: none;
+}
+
+.screenshot {
+  transform: perspective(800px) rotateY(25deg) scale(0.9) rotateX(10deg);
+  filter: blur(2px);
+  opacity: 0.5;
+  transition: 0.6s ease all;
+  display: inline-block;
+}
+.screenshot:hover {
+  transform: perspective(800px) rotateY(-15deg) translateY(-50px) rotateX(10deg) scale(1);
+  filter: blur(0);
+  opacity: 1;
+}
+.screenshot img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  max-height: 400px;
+}
+.screenshot .phone {
+  position: absolute;
+  width: 80px;
+  height: auto;
+  left: 40px;
+  bottom: 0px;
+  border-top-width: 16px;
+  border-bottom-width: 16px;
+  border-color: whitesmoke;
 }
 
 /* ==========================================================================
@@ -239,7 +265,6 @@ body section a:hover {
 @media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
 }
-
 /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
@@ -247,41 +272,46 @@ body section a:hover {
    ========================================================================== */
 @media print {
   *,
-  *:before,
-  *:after,
-  *:first-letter,
-  *:first-line {
+*:before,
+*:after,
+*:first-letter,
+*:first-line {
     background: transparent !important;
     color: #000 !important;
     /* Black prints faster:
-                                   http://www.sanbeiji.com/archives/953 */
-    -webkit-box-shadow: none !important;
-            box-shadow: none !important;
+           http://www.sanbeiji.com/archives/953 */
+    box-shadow: none !important;
     text-shadow: none !important;
   }
+
   a,
-  a:visited {
+a:visited {
     text-decoration: underline;
   }
+
   a[href]:after {
     content: " (" attr(href) ")";
   }
+
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
+
   /*
    * Don't show links that are fragment identifiers,
    * or use the `javascript:` pseudo protocol
    */
   a[href^="#"]:after,
-  a[href^="javascript:"]:after {
+a[href^="javascript:"]:after {
     content: "";
   }
+
   pre,
-  blockquote {
+blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
+
   /*
    * Printing Tables:
    * http://css-discuss.incutio.com/wiki/Printing_Tables
@@ -289,22 +319,27 @@ body section a:hover {
   thead {
     display: table-header-group;
   }
+
   tr,
-  img {
+img {
     page-break-inside: avoid;
   }
+
   img {
     max-width: 100% !important;
   }
+
   p,
-  h2,
-  h3 {
+h2,
+h3 {
     orphans: 3;
     widows: 3;
   }
+
   h2,
-  h3 {
+h3 {
     page-break-after: avoid;
   }
 }
+
 /*# sourceMappingURL=main.css.map */
