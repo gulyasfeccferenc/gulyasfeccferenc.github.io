@@ -7,7 +7,7 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-@import url("https://fonts.googleapis.com/css2?family=Exo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
 html {
   color: #222;
   font-size: 1em;
@@ -83,66 +83,208 @@ textarea {
   padding: 0.2em 0;
 }
 
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+:root {
+  --accent: rgb(61 8 131);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding: 60px;
+}
+
 body {
-  background: linear-gradient(0deg, #2196f3, #9c27b0);
-  color: #f0f0f0;
-  font-family: "Exo", serif;
+  background: linear-gradient(0deg, var(--accent) 95%, white 95%);
+  color: #222222;
+  font-family: "Source Sans Pro", sans-serif;
   position: relative;
   min-height: 100vh;
   height: 100%;
 }
-body header {
+body > header {
+  display: block;
+  position: sticky;
+  top: 0;
+  padding: 1rem;
+  backdrop-filter: saturate(180%) blur(7px);
+  z-index: 1;
+}
+body > header ul {
+  justify-content: space-around;
+  list-style: none;
+  display: flex;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 1rem;
+}
+body > header ul a {
+  text-decoration: none;
+  font-size: 1.25rem;
+  color: var(--accent);
+  font-weight: 500;
+  text-shadow: 1px 1px 4px white;
+}
+body main > header {
+  position: relative;
+  height: calc(100vh - 102px);
   text-align: center;
   padding-top: 3em;
+  background: radial-gradient(circle at 50% 100%, rgba(41, 23, 208, 0.4), transparent 40%);
+  transition: all 0.25s ease-in;
 }
-body header > img {
-  max-width: 200px;
+body main > header > img {
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - min(80%, 420px) / 2);
+  max-width: min(80%, 420px);
   height: auto;
-  border: 4px solid rgba(0, 0, 0, 0.3);
-  border-radius: 50%;
+  border: none;
   margin: 0 auto;
   transition: all 0.4s cubic-bezier(1, 0, 0, 1);
 }
-body header > img:hover {
-  border-radius: 0;
-}
-body header h1 {
+body main > header h1 {
   font-size: 2.5em;
-  text-shadow: 0px 0px 4px black;
+  max-width: 650px;
+  margin: 15% auto;
 }
-body header ul {
+body main > header h1 small {
+  color: blue;
+  font-size: 100%;
+}
+body main > header:before {
+  content: "";
+  background: white;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+body main > figure ul {
+  list-style: none;
+  display: flex;
+  margin: 0 auto;
+  padding: 3rem;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 200px;
+  flex-wrap: wrap;
+}
+body main > figure ul img {
+  transition: all 0.25s ease-in;
+}
+body main > figure ul img:hover {
+  filter: invert(30%) sepia(20%) saturate(3180%) hue-rotate(135deg) brightness(95%) contrast(80%);
+}
+body section {
+  text-align: center;
+  margin: 1rem auto 0;
+  padding: 1rem 1rem;
+  background: rgba(255, 255, 255, 0.8);
+  max-width: 1024px;
+  border-radius: 1rem;
+}
+body section figure {
+  margin: 0;
+}
+body section hr {
+  border-top: 1px solid var(--accent);
+}
+body section ul {
   list-style: none;
   padding: 0;
   margin: 0;
   cursor: default;
 }
-body header ul li {
+body section ul li {
   display: inline-block;
 }
-body header ul li img {
+body section ul li img {
   height: auto;
 }
-body header ul.hobbies {
+body section ul.hobbies {
   font-size: 1.5em;
 }
-body section {
-  text-align: center;
-  margin-top: 1rem;
-  padding-top: 1rem;
-  background: rgba(0, 0, 0, 0.15);
-  box-shadow: 0 9px 12px #55b4d2;
+body section .stack span {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 0 0.25rem;
+  margin-right: 4px;
+  border-radius: 4px;
+  border: 1px solid silver;
+  cursor: default;
+}
+body section#about article {
+  max-width: max(70%, 730px);
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+}
+body section#about aside {
+  max-width: max(20%, 250px);
+  display: inline-block;
+  margin: 1rem 0;
+}
+body section#about aside .iam {
+  list-style: inside;
+}
+body section#about aside .iam li {
+  display: list-item;
+}
+body section#about aside .skill-container {
+  width: 100%;
+  max-width: 250px;
+}
+body section#about aside .skill-container .skill {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--accent);
+  margin-bottom: 1rem;
+}
+body section#about aside .skill-container .skill:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 2px;
+  background: linear-gradient(89deg, var(--accent), #00ff1c);
+  bottom: -2px;
+  transition: width 0.25s ease-in;
+}
+body section#about aside .skill-container .skill.s-3:after {
+  width: 50%;
+}
+body section#about aside .skill-container .skill.s-4:after {
+  width: 75%;
+}
+body section#about aside .skill-container .skill.s-5:after {
+  width: 100%;
+}
+body section#about aside .skill-container .skill strong,
+body section#about aside .skill-container .skill span {
+  display: inline-block;
 }
 body section a {
-  color: #f0f0f0;
+  color: var(--accent);
   text-decoration: none;
-  border-bottom: 1px dashed #f0f0f0;
+  border-bottom: 1px dashed var(--accent);
   transition: border 0.4s ease-in;
 }
 body section a:hover {
   border-bottom: 1px solid #f0f0f0;
 }
 body section article {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   margin: 1rem;
 }
 body section article .left-block,
@@ -181,7 +323,7 @@ body section article .right-block img {
   width: 80px;
   height: auto;
   left: 40px;
-  bottom: 0px;
+  bottom: 0;
   border-top-width: 16px;
   border-bottom-width: 16px;
   border-color: whitesmoke;
@@ -247,10 +389,8 @@ body section article .right-block img {
  */
 .clearfix:before,
 .clearfix:after {
-  content: " ";
-  /* 1 */
-  display: table;
-  /* 2 */
+  content: " "; /* 1 */
+  display: table; /* 2 */
 }
 
 .clearfix:after {
@@ -262,6 +402,41 @@ body section article .right-block img {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: linear-gradient(0deg, var(--accent) 95%, #1a1a1a 95%);
+    color: #f0f0f0;
+  }
+  body section {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  body section a {
+    filter: saturate(4.5);
+  }
+  body > header ul {
+    background: none;
+  }
+  body > header ul a {
+    color: white;
+  }
+  body main > header:before {
+    background: #1a1a1a;
+  }
+}
+@media only screen and (max-width: 40em) {
+  body section#about article,
+  body section#about aside {
+    margin: 1rem;
+    max-width: calc(100% - 2rem);
+    display: block;
+  }
+  body section#about article .skill-container,
+  body section#about aside .skill-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
 @media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
 }
@@ -272,46 +447,39 @@ body section article .right-block img {
    ========================================================================== */
 @media print {
   *,
-*:before,
-*:after,
-*:first-letter,
-*:first-line {
+  *:before,
+  *:after,
+  *:first-letter,
+  *:first-line {
     background: transparent !important;
-    color: #000 !important;
-    /* Black prints faster:
-           http://www.sanbeiji.com/archives/953 */
+    color: #000 !important; /* Black prints faster:
+       http://www.sanbeiji.com/archives/953 */
     box-shadow: none !important;
     text-shadow: none !important;
   }
-
   a,
-a:visited {
+  a:visited {
     text-decoration: underline;
   }
-
   a[href]:after {
     content: " (" attr(href) ")";
   }
-
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
-
   /*
    * Don't show links that are fragment identifiers,
    * or use the `javascript:` pseudo protocol
    */
   a[href^="#"]:after,
-a[href^="javascript:"]:after {
+  a[href^="javascript:"]:after {
     content: "";
   }
-
   pre,
-blockquote {
+  blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
-
   /*
    * Printing Tables:
    * http://css-discuss.incutio.com/wiki/Printing_Tables
@@ -319,25 +487,21 @@ blockquote {
   thead {
     display: table-header-group;
   }
-
   tr,
-img {
+  img {
     page-break-inside: avoid;
   }
-
   img {
     max-width: 100% !important;
   }
-
   p,
-h2,
-h3 {
+  h2,
+  h3 {
     orphans: 3;
     widows: 3;
   }
-
   h2,
-h3 {
+  h3 {
     page-break-after: avoid;
   }
 }
